@@ -1,282 +1,401 @@
-<!DOCTYPE HTML>
-<!--
-	Escape Velocity by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Escape Velocity by HTML5 UP</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body class="homepage is-preload">
-		<div id="page-wrapper">
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Pedro Molina · Desarrollador Backend</title>
+	<meta name="description" content="Portafolio de Pedro Alejandro Molina Ortiz, Ingeniero de Sistemas y desarrollador backend en Cúcuta, Colombia. Desarrollo web con Django y Spring Boot, bases de datos y APIs." />
+	<meta name="author" content="Pedro Alejandro Molina Ortiz" />
+	<meta name="theme-color" content="#0b0b0e" />
+	<link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
 
-			<!-- Header -->
-				<section id="header" class="wrapper">
+	<!-- Open Graph / Twitter -->
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Pedro Molina · Desarrollador Backend" />
+	<meta property="og:description" content="Ingeniero de Sistemas · Desarrollo web con Django y Spring Boot. Cúcuta, Colombia." />
+	<meta property="og:image" content="images/og-cover.jpg" />
+	<meta property="og:locale" content="es_CO" />
+	<meta name="twitter:card" content="summary_large_image" />
 
-					<!-- Logo -->
-						<div id="logo">
-							<h1><a href="index.html">Escape Velocity</a></h1>
-							<p>A free responsive site template by HTML5 UP</p>
+	<!-- Evita el parpadeo de tema/idioma antes de cargar el CSS -->
+	<script>
+		(function () {
+			try {
+				var t = localStorage.getItem('theme');
+				if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+				if (localStorage.getItem('lang') === 'en') document.documentElement.setAttribute('lang', 'en');
+			} catch (e) {}
+		})();
+	</script>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" />
+	<link rel="stylesheet" href="assets/css/fontawesome-all.min.css" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "Person",
+		"name": "Pedro Alejandro Molina Ortiz",
+		"jobTitle": "Desarrollador Backend",
+		"email": "mailto:pealmo98@gmail.com",
+		"address": { "@type": "PostalAddress", "addressLocality": "Cúcuta", "addressCountry": "CO" },
+		"alumniOf": { "@type": "CollegeOrUniversity", "name": "Universidad Francisco de Paula Santander" },
+		"sameAs": [
+			"https://github.com/pedrodevpy",
+			"https://www.linkedin.com/in/pedro-molina-b6b899267/"
+		]
+	}
+	</script>
+</head>
+<body class="is-preload">
+
+	<a class="skip-link" href="#main" data-i18n="nav.skip">Saltar al contenido</a>
+
+	<!-- Header / Nav -->
+	<header id="header">
+		<div class="container nav-bar">
+			<a href="#top" class="logo" aria-label="Pedro Molina — inicio">
+				<span class="logo-mark">PM</span>
+				<span class="logo-text">Pedro Molina</span>
+			</a>
+
+			<nav id="nav" aria-label="Navegación principal">
+				<ul>
+					<li><a href="#about" data-i18n="nav.about">Sobre mí</a></li>
+					<li><a href="#stack" data-i18n="nav.stack">Stack</a></li>
+					<li><a href="#experience" data-i18n="nav.experience">Experiencia</a></li>
+					<li><a href="#projects" data-i18n="nav.projects">Proyectos</a></li>
+					<li><a href="#education" data-i18n="nav.education">Educación</a></li>
+					<li><a href="#contact" data-i18n="nav.contact">Contacto</a></li>
+				</ul>
+			</nav>
+
+			<div class="nav-tools">
+				<button type="button" class="icon-btn" id="lang-toggle" aria-label="Switch to English" title="English"><span>EN</span></button>
+				<button type="button" class="icon-btn" id="theme-toggle" aria-label="Cambiar a tema claro" title="Tema">
+					<i class="fas fa-sun" aria-hidden="true"></i>
+					<i class="fas fa-moon" aria-hidden="true"></i>
+				</button>
+				<a class="btn btn-primary btn-sm nav-cv" href="assets/pdf/HV-ES-PedroMolina.pdf" download data-cv>
+					<i class="fas fa-download" aria-hidden="true"></i> <span data-i18n="nav.cv">CV</span>
+				</a>
+				<button type="button" class="icon-btn nav-toggle" id="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav">
+					<span class="bar"></span><span class="bar"></span><span class="bar"></span>
+				</button>
+			</div>
+		</div>
+	</header>
+
+	<main id="main">
+
+		<!-- Hero -->
+		<section id="top" class="hero">
+			<div class="container hero-grid">
+				<div class="hero-copy">
+					<p class="eyebrow">
+						<span class="dot" aria-hidden="true"></span>
+						<span data-i18n="hero.eyebrow">Cúcuta, Colombia · Disponible para trabajo remoto</span>
+					</p>
+					<h1>Pedro Alejandro <br />Molina Ortiz</h1>
+					<p class="hero-title" data-i18n="hero.title">Ingeniero de Sistemas · Desarrollador Backend</p>
+					<p class="hero-lead" data-i18n="hero.lead">Desarrollo web con Django y Spring Boot. Construyo soluciones digitales funcionales y orientadas a las necesidades del usuario, con foco en backend, datos y APIs.</p>
+					<div class="actions">
+						<a href="#projects" class="btn btn-primary" data-i18n="hero.cta1">Ver proyectos</a>
+						<a href="#contact" class="btn btn-ghost" data-i18n="hero.cta2">Contactar</a>
+					</div>
+					<ul class="social" aria-label="Redes">
+						<li><a href="https://github.com/pedrodevpy" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a></li>
+						<li><a href="https://www.linkedin.com/in/pedro-molina-b6b899267/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a></li>
+						<li><a href="mailto:pealmo98@gmail.com" aria-label="Email"><i class="fas fa-envelope" aria-hidden="true"></i></a></li>
+						<li><a href="https://wa.me/573163423228" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i></a></li>
+					</ul>
+				</div>
+
+				<div class="hero-visual" aria-hidden="true">
+					<div class="code-card">
+						<div class="code-bar"><span></span><span></span><span></span><em>profile.py</em></div>
+<pre><code><span class="c"># Perfil profesional</span>
+<span class="v">developer</span> = {
+    <span class="s">"name"</span>: <span class="s">"Pedro Molina"</span>,
+    <span class="s">"role"</span>: <span class="s">"Backend Developer"</span>,
+    <span class="s">"stack"</span>: [<span class="s">"Python"</span>, <span class="s">"Django"</span>, <span class="s">"PostgreSQL"</span>],
+    <span class="s">"also"</span>: [<span class="s">"Java"</span>, <span class="s">"Spring Boot"</span>, <span class="s">"Vue"</span>],
+    <span class="s">"location"</span>: <span class="s">"Cúcuta, CO"</span>,
+    <span class="s">"remote"</span>: <span class="k">True</span>,
+    <span class="s">"open_to"</span>: [<span class="s">"empleo"</span>, <span class="s">"freelance"</span>],
+}</code></pre>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Sobre mí -->
+		<section id="about" class="section">
+			<div class="container">
+				<header class="section-head reveal">
+					<span class="section-index">01</span>
+					<h2 data-i18n="about.h2">Sobre mí</h2>
+				</header>
+				<div class="about-grid">
+					<div class="about-text reveal">
+						<p data-i18n="about.p1">Soy desarrollador web enfocado en crear soluciones digitales modernas, funcionales y orientadas a las necesidades del usuario. Cuento con experiencia en desarrollo frontend, backend, bases de datos e integración de tecnologías para construir aplicaciones eficientes y escalables.</p>
+						<p data-i18n="about.p2">Me apasionan la tecnología, el aprendizaje continuo y la resolución de problemas reales mediante software. Actualmente curso Ingeniería de Sistemas y trabajo de forma remota, abierto a oportunidades de empleo y proyectos freelance, especialmente con micro y pequeñas empresas que necesiten una presencia digital sólida.</p>
+					</div>
+					<ul class="facts reveal">
+						<li>
+							<i class="fas fa-code" aria-hidden="true"></i>
+							<div><strong>+2</strong><span data-i18n="about.f1">años de experiencia</span></div>
+						</li>
+						<li>
+							<i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+							<div><strong>Cúcuta, Colombia</strong><span data-i18n="about.f2">Ubicación</span></div>
+						</li>
+						<li>
+							<i class="fas fa-language" aria-hidden="true"></i>
+							<div><strong data-i18n="about.f3v">Español nativo · Inglés B1</strong><span data-i18n="about.f3">Idiomas</span></div>
+						</li>
+						<li>
+							<i class="fas fa-laptop-house" aria-hidden="true"></i>
+							<div><strong data-i18n="about.f4v">Remoto · Empleo o freelance</strong><span data-i18n="about.f4">Modalidad</span></div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+
+		<!-- Stack -->
+		<section id="stack" class="section section-alt">
+			<div class="container">
+				<header class="section-head reveal">
+					<span class="section-index">02</span>
+					<h2 data-i18n="stack.h2">Stack tecnológico</h2>
+					<p data-i18n="stack.p">Herramientas con las que trabajo, agrupadas según el nivel de uso.</p>
+				</header>
+				<div class="stack-grid">
+					<article class="stack-group reveal">
+						<h3><span class="tag tag-primary" data-i18n="stack.g1">Principal</span></h3>
+						<ul class="chips">
+							<li><i class="fab fa-python" aria-hidden="true"></i>Python</li>
+							<li><i class="fas fa-server" aria-hidden="true"></i>Django</li>
+							<li><i class="fas fa-database" aria-hidden="true"></i>PostgreSQL</li>
+							<li><i class="fab fa-git-alt" aria-hidden="true"></i>Git &amp; GitHub</li>
+							<li><i class="fas fa-vial" aria-hidden="true"></i>pytest</li>
+							<li><i class="fas fa-plug" aria-hidden="true"></i>APIs REST</li>
+						</ul>
+					</article>
+					<article class="stack-group reveal">
+						<h3><span class="tag" data-i18n="stack.g2">Con experiencia</span></h3>
+						<ul class="chips">
+							<li><i class="fab fa-java" aria-hidden="true"></i>Java</li>
+							<li><i class="fas fa-leaf" aria-hidden="true"></i>Spring Boot</li>
+							<li><i class="fas fa-database" aria-hidden="true"></i>MySQL</li>
+							<li><i class="fab fa-docker" aria-hidden="true"></i>Docker</li>
+							<li><i class="fas fa-vial" aria-hidden="true"></i>JUnit</li>
+							<li><i class="fas fa-paper-plane" aria-hidden="true"></i>Postman</li>
+							<li><i class="fab fa-html5" aria-hidden="true"></i>HTML &amp; CSS</li>
+							<li><i class="fab fa-js" aria-hidden="true"></i>JavaScript</li>
+						</ul>
+					</article>
+					<article class="stack-group reveal">
+						<h3><span class="tag" data-i18n="stack.g3">Familiarizado</span></h3>
+						<ul class="chips">
+							<li><i class="fab fa-vuejs" aria-hidden="true"></i>Vue</li>
+							<li><i class="fas fa-database" aria-hidden="true"></i>MongoDB</li>
+							<li><i class="fas fa-search" aria-hidden="true"></i>SEO on-page</li>
+						</ul>
+					</article>
+					<article class="stack-group reveal">
+						<h3><span class="tag" data-i18n="stack.g4">Herramientas IA</span></h3>
+						<ul class="chips">
+							<li><i class="fas fa-terminal" aria-hidden="true"></i>Claude Code</li>
+							<li><i class="fas fa-terminal" aria-hidden="true"></i>Codex</li>
+							<li><i class="fas fa-terminal" aria-hidden="true"></i>Antigravity</li>
+						</ul>
+					</article>
+				</div>
+			</div>
+		</section>
+
+		<!-- Experiencia -->
+		<section id="experience" class="section">
+			<div class="container">
+				<header class="section-head reveal">
+					<span class="section-index">03</span>
+					<h2 data-i18n="exp.h2">Experiencia profesional</h2>
+				</header>
+				<ol class="timeline">
+					<li class="timeline-item reveal">
+						<div class="timeline-meta">
+							<time data-i18n="exp.2.date">Ago 2026 — Actualidad</time>
+							<span class="tag" data-i18n="exp.2.mode">Prácticas profesionales</span>
 						</div>
-
-					<!-- Nav -->
-						<nav id="nav">
-							<ul>
-								<li class="current"><a href="index.html">Home</a></li>
-								<li>
-									<a href="#">Dropdown</a>
-									<ul>
-										<li><a href="#">Lorem ipsum</a></li>
-										<li><a href="#">Magna veroeros</a></li>
-										<li><a href="#">Etiam nisl</a></li>
-										<li>
-											<a href="#">Sed consequat</a>
-											<ul>
-												<li><a href="#">Lorem dolor</a></li>
-												<li><a href="#">Amet consequat</a></li>
-												<li><a href="#">Magna phasellus</a></li>
-												<li><a href="#">Etiam nisl</a></li>
-												<li><a href="#">Sed feugiat</a></li>
-											</ul>
-										</li>
-										<li><a href="#">Nisl tempus</a></li>
-									</ul>
-								</li>
-								<li><a href="left-sidebar.html">Left Sidebar</a></li>
-								<li><a href="right-sidebar.html">Right Sidebar</a></li>
-								<li><a href="no-sidebar.html">No Sidebar</a></li>
+						<div class="timeline-body">
+							<h3 data-i18n="exp.2.role">Desarrollador de Datos y Presencia Web</h3>
+							<p class="company">IngeniaLink S.A.S.</p>
+							<ul class="bullets">
+								<li data-i18n="exp.2.b1">Unifiqué tres plantillas Excel de registro de etiquetas RFID en un formato consolidado, con validación e importación automatizada hacia la base de datos en la nube.</li>
+								<li data-i18n="exp.2.b2">Desarrollé una API para registrar etiquetas vendidas mediante código de barras y actualizar la información en tiempo real.</li>
+								<li data-i18n="exp.2.b3">Revisé y optimicé la estructura de la base de datos de trazabilidad y el proceso de conciliación para que el cliente pudiera realizarlo por su cuenta.</li>
+								<li data-i18n="exp.2.b4">Mejoré la web corporativa con contenido sobre RFID e Industria 4.0, sección de preguntas frecuentes, SEO on-page, sitemap y seguimiento con Google Search Console y Analytics.</li>
 							</ul>
-						</nav>
+							<ul class="chips chips-sm">
+								<li>SQL</li><li>APIs</li><li>Excel</li><li>HTML &amp; CSS</li><li>SEO</li><li>Search Console</li><li>Analytics</li>
+							</ul>
+						</div>
+					</li>
+					<li class="timeline-item reveal">
+						<div class="timeline-meta">
+							<time data-i18n="exp.1.date">Mar 2024 — Actualidad</time>
+							<span class="tag" data-i18n="exp.1.mode">Remoto · Prácticas</span>
+						</div>
+						<div class="timeline-body">
+							<h3>Customer Support Agent <span class="muted">·</span> <span data-i18n="exp.1.sub">Revisión de código Python</span></h3>
+							<p class="company">Tripleten</p>
+							<ul class="bullets">
+								<li data-i18n="exp.1.b1">Brindo soporte técnico a estudiantes de programación.</li>
+								<li data-i18n="exp.1.b2">Reviso código en Python y SQL, identificando errores y proponiendo soluciones.</li>
+								<li data-i18n="exp.1.b3">Acompaño a cada estudiante en su proceso de aprendizaje, guiándolo para que comprenda y supere bloqueos técnicos.</li>
+								<li data-i18n="exp.1.b4">Gestiono reportes relacionados con el funcionamiento de la plataforma educativa.</li>
+							</ul>
+							<ul class="chips chips-sm">
+								<li>Python</li><li>SQL</li><li>Claude Code</li><li>Codex</li><li>Antigravity</li><li>Jira</li><li>Confluence</li><li>Slack</li><li>Discord</li>
+							</ul>
+						</div>
+					</li>
+				</ol>
+			</div>
+		</section>
 
-				</section>
+		<!-- Proyectos -->
+		<section id="projects" class="section section-alt">
+			<div class="container">
+				<header class="section-head reveal">
+					<span class="section-index">04</span>
+					<h2 data-i18n="proj.h2">Proyectos destacados</h2>
+					<p data-i18n="proj.p">Trabajo real que combina desarrollo web, backend, datos y APIs.</p>
+				</header>
 
-			<!-- Intro -->
-				<section id="intro" class="wrapper style1">
-					<div class="title">The Introduction</div>
-					<div class="container">
-						<p class="style1">So in case you were wondering what this is all about ...</p>
-						<p class="style2">
-							Escape Velocity is a free responsive<br class="mobile-hide" />
-							site template by <a href="http://html5up.net" class="nobr">HTML5 UP</a>
-						</p>
-						<p class="style3">It's <strong>responsive</strong>, built on <strong>HTML5</strong> and <strong>CSS3</strong>, and released for
-						free under the <a href="http://html5up.net/license">Creative Commons Attribution 3.0 license</a>, so use it for any of
-						your personal or commercial projects &ndash; just be sure to credit us!</p>
-						<ul class="actions">
-							<li><a href="#" class="button style3 large">Proceed</a></li>
+				<article class="project reveal">
+					<a class="project-media" href="https://daniel-rivera-fisioterapia.vercel.app" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+						<img src="images/clinica-desktop.webp" width="1200" height="650" alt="Captura de la landing page de la Clínica Daniel Rivera" loading="lazy" />
+					</a>
+					<div class="project-body">
+						<p class="project-cat" data-i18n="proj.1.cat">Frontend · Landing page · En producción</p>
+						<h3>Clínica Daniel Rivera</h3>
+						<p class="project-sub" data-i18n="proj.1.sub">Fisioterapia, estética y bienestar — Cúcuta</p>
+						<p data-i18n="proj.1.desc">Landing page profesional que permite a los pacientes conocer los servicios de la clínica y solicitar una cita directamente desde la página. El flujo de agendamiento selecciona área y servicio, genera los horarios disponibles según el día, bloquea fechas pasadas y domingos, valida el formulario y construye automáticamente el mensaje de WhatsApp con los datos de la cita.</p>
+						<dl class="project-facts">
+							<div><dt data-i18n="proj.role">Mi rol</dt><dd data-i18n="proj.1.role">Desarrollador web, enfocado en frontend y experiencia de usuario</dd></div>
+							<div><dt data-i18n="proj.highlights">Destacado</dt><dd data-i18n="proj.1.hl">JavaScript puro sin framework, CSS con variables, Grid y clamp(), SEO técnico con JSON-LD y Open Graph, accesibilidad con ARIA y prefers-reduced-motion, ~660 KB en total.</dd></div>
+						</dl>
+						<ul class="chips chips-sm">
+							<li>HTML5</li><li>CSS3</li><li>JavaScript</li><li>Vercel</li><li>JSON-LD</li><li>Open Graph</li><li>Google Maps</li><li>Python + Pillow</li>
+						</ul>
+						<div class="actions">
+							<a href="https://daniel-rivera-fisioterapia.vercel.app" class="btn btn-primary" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt" aria-hidden="true"></i> <span data-i18n="proj.view">Ver proyecto</span></a>
+							<a href="https://github.com/pedrodevpy/Clinica-Daniel-Rivera" class="btn btn-ghost" target="_blank" rel="noopener noreferrer"><i class="fab fa-github" aria-hidden="true"></i> <span data-i18n="proj.code">Ver código</span></a>
+						</div>
+					</div>
+				</article>
+
+				<article class="project project-reverse reveal">
+					<div class="project-media project-media-static">
+						<img src="images/ingenialink-cover.svg" width="1200" height="675" alt="Diagrama: tres plantillas Excel convergen en un módulo de validación que importa a una base de datos de trazabilidad RFID" loading="lazy" />
+					</div>
+					<div class="project-body">
+						<p class="project-cat" data-i18n="proj.2.cat">Backend · Datos · Web · Proyecto profesional</p>
+						<h3 data-i18n="proj.2.name">Importación unificada y optimización web</h3>
+						<p class="project-sub">IngeniaLink S.A.S.</p>
+						<p data-i18n="proj.2.desc">Cada lote de etiquetas RFID debía registrarse con tres archivos Excel distintos, un proceso lento, ambiguo y propenso a errores. Diseñé una plantilla consolidada y un módulo de validación e importación automatizada hacia la base de datos en la nube, además de una API para registrar ventas por código de barras en tiempo real. En paralelo, mejoré la web corporativa, su contenido y su posicionamiento SEO.</p>
+						<dl class="project-facts">
+							<div><dt data-i18n="proj.role">Mi rol</dt><dd data-i18n="proj.2.role">Desarrollador de datos y presencia web durante las prácticas profesionales</dd></div>
+							<div><dt data-i18n="proj.highlights">Destacado</dt><dd data-i18n="proj.2.hl">Validación de campos obligatorios, formatos y duplicados; optimización de la base de datos de trazabilidad; conciliación realizable por el cliente; FAQ, sitemap, metadatos y métricas con Search Console y Analytics.</dd></div>
+						</dl>
+						<ul class="chips chips-sm">
+							<li>SQL</li><li>APIs</li><li>Excel</li><li>HTML &amp; CSS</li><li>SEO</li><li>Search Console</li><li>Analytics</li>
 						</ul>
 					</div>
-				</section>
+				</article>
+			</div>
+		</section>
 
-			<!-- Main -->
-				<section id="main" class="wrapper style2">
-					<div class="title">The Details</div>
-					<div class="container">
-
-						<!-- Image -->
-							<a href="#" class="image featured">
-								<img src="images/pic01.jpg" alt="" />
-							</a>
-
-						<!-- Features -->
-							<section id="features">
-								<header class="style1">
-									<h2>Dolor consequat feugiat amet veroeros</h2>
-									<p>Feugiat dolor nullam orci pretium phasellus justo</p>
-								</header>
-								<div class="feature-list">
-									<div class="row">
-										<div class="col-6 col-12-medium">
-											<section>
-												<h3 class="icon fa-comment">Mattis velit diam vulputate</h3>
-												<p>Eget mattis at, laoreet vel et velit aliquam diam ante, aliquet sit amet vulputate et magna feugiat laoreet vel velit lorem.</p>
-											</section>
-										</div>
-										<div class="col-6 col-12-medium">
-											<section>
-												<h3 class="icon solid fa-sync">Lorem ipsum dolor sit veroeros</h3>
-												<p>Eget mattis at, laoreet vel et velit aliquam diam ante, aliquet sit amet vulputate et magna feugiat laoreet vel velit lorem.</p>
-											</section>
-										</div>
-										<div class="col-6 col-12-medium">
-											<section>
-												<h3 class="icon fa-image">Pretium phasellus justo lorem</h3>
-												<p>Eget mattis at, laoreet vel et velit aliquam diam ante, aliquet sit amet vulputate et magna feugiat laoreet vel velit lorem.</p>
-											</section>
-										</div>
-										<div class="col-6 col-12-medium">
-											<section>
-												<h3 class="icon solid fa-cog">Tempus sed pretium orci</h3>
-												<p>Eget mattis at, laoreet vel et velit aliquam diam ante, aliquet sit amet vulputate et magna feugiat laoreet vel velit lorem.</p>
-											</section>
-										</div>
-										<div class="col-6 col-12-medium">
-											<section>
-												<h3 class="icon solid fa-wrench">Aliquam consequat et feugiat</h3>
-												<p>Eget mattis at, laoreet vel et velit aliquam diam ante, aliquet sit amet vulputate et magna feugiat laoreet vel velit lorem.</p>
-											</section>
-										</div>
-										<div class="col-6 col-12-medium">
-											<section>
-												<h3 class="icon solid fa-check">Dolore laoreet aliquam mattis</h3>
-												<p>Eget mattis at, laoreet vel et velit aliquam diam ante, aliquet sit amet vulputate et magna feugiat laoreet vel velit lorem.</p>
-											</section>
-										</div>
-									</div>
-								</div>
-								<ul class="actions special">
-									<li><a href="#" class="button style1 large">Get Started</a></li>
-									<li><a href="#" class="button style2 large">More Info</a></li>
-								</ul>
-							</section>
-
-					</div>
-				</section>
-
-			<!-- Highlights -->
-				<section id="highlights" class="wrapper style3">
-					<div class="title">The Endorsements</div>
-					<div class="container">
-						<div class="row aln-center">
-							<div class="col-4 col-12-medium">
-								<section class="highlight">
-									<a href="#" class="image featured"><img src="images/pic02.jpg" alt="" /></a>
-									<h3><a href="#">Aliquam diam consequat</a></h3>
-									<p>Eget mattis at, laoreet vel amet sed velit aliquam diam ante, dolor aliquet sit amet vulputate mattis amet laoreet lorem.</p>
-									<ul class="actions">
-										<li><a href="#" class="button style1">Learn More</a></li>
-									</ul>
-								</section>
-							</div>
-							<div class="col-4 col-12-medium">
-								<section class="highlight">
-									<a href="#" class="image featured"><img src="images/pic03.jpg" alt="" /></a>
-									<h3><a href="#">Nisl adipiscing sed lorem</a></h3>
-									<p>Eget mattis at, laoreet vel amet sed velit aliquam diam ante, dolor aliquet sit amet vulputate mattis amet laoreet lorem.</p>
-									<ul class="actions">
-										<li><a href="#" class="button style1">Learn More</a></li>
-									</ul>
-								</section>
-							</div>
-							<div class="col-4 col-12-medium">
-								<section class="highlight">
-									<a href="#" class="image featured"><img src="images/pic04.jpg" alt="" /></a>
-									<h3><a href="#">Mattis tempus lorem</a></h3>
-									<p>Eget mattis at, laoreet vel amet sed velit aliquam diam ante, dolor aliquet sit amet vulputate mattis amet laoreet lorem.</p>
-									<ul class="actions">
-										<li><a href="#" class="button style1">Learn More</a></li>
-									</ul>
-								</section>
-							</div>
+		<!-- Educación -->
+		<section id="education" class="section">
+			<div class="container">
+				<header class="section-head reveal">
+					<span class="section-index">05</span>
+					<h2 data-i18n="edu.h2">Educación</h2>
+				</header>
+				<ul class="edu-list">
+					<li class="edu-item reveal">
+						<i class="fas fa-graduation-cap" aria-hidden="true"></i>
+						<div>
+							<h3 data-i18n="edu.1.title">Ingeniería de Sistemas</h3>
+							<p class="company">Universidad Francisco de Paula Santander</p>
+							<p class="muted" data-i18n="edu.1.status">En curso · Cúcuta, Colombia</p>
 						</div>
-					</div>
-				</section>
+					</li>
+				</ul>
+			</div>
+		</section>
 
-			<!-- Footer -->
-				<section id="footer" class="wrapper">
-					<div class="title">The Rest Of It</div>
-					<div class="container">
-						<header class="style1">
-							<h2>Ipsum sapien elementum portitor?</h2>
-							<p>
-								Sed turpis tortor, tincidunt sed ornare in metus porttitor mollis nunc in aliquet.<br />
-								Nam pharetra laoreet imperdiet volutpat etiam feugiat.
-							</p>
-						</header>
-						<div class="row">
-							<div class="col-6 col-12-medium">
+		<!-- Contacto -->
+		<section id="contact" class="section section-alt">
+			<div class="container">
+				<header class="section-head reveal">
+					<span class="section-index">06</span>
+					<h2 data-i18n="contact.h2">Contacto</h2>
+					<p data-i18n="contact.p">¿Tienes un proyecto o una vacante? Escríbeme y conversemos.</p>
+				</header>
+				<div class="contact-grid">
+					<a class="contact-card reveal" href="mailto:pealmo98@gmail.com">
+						<i class="fas fa-envelope" aria-hidden="true"></i>
+						<span class="contact-label">Email</span>
+						<span class="contact-value">pealmo98@gmail.com</span>
+					</a>
+					<a class="contact-card reveal" href="https://wa.me/573163423228" target="_blank" rel="noopener noreferrer">
+						<i class="fab fa-whatsapp" aria-hidden="true"></i>
+						<span class="contact-label">WhatsApp</span>
+						<span class="contact-value">+57 316 342 3228</span>
+					</a>
+					<a class="contact-card reveal" href="https://www.linkedin.com/in/pedro-molina-b6b899267/" target="_blank" rel="noopener noreferrer">
+						<i class="fab fa-linkedin-in" aria-hidden="true"></i>
+						<span class="contact-label">LinkedIn</span>
+						<span class="contact-value">pedro-molina-b6b899267</span>
+					</a>
+					<a class="contact-card reveal" href="https://github.com/pedrodevpy" target="_blank" rel="noopener noreferrer">
+						<i class="fab fa-github" aria-hidden="true"></i>
+						<span class="contact-label">GitHub</span>
+						<span class="contact-value">pedrodevpy</span>
+					</a>
+				</div>
+				<div class="actions actions-center reveal">
+					<a class="btn btn-primary btn-lg" href="assets/pdf/HV-ES-PedroMolina.pdf" download data-cv>
+						<i class="fas fa-download" aria-hidden="true"></i> <span data-i18n="contact.cv">Descargar CV (PDF)</span>
+					</a>
+				</div>
+			</div>
+		</section>
 
-								<!-- Contact Form -->
-									<section>
-										<form method="post" action="#">
-											<div class="row gtr-50">
-												<div class="col-6 col-12-small">
-													<input type="text" name="name" id="contact-name" placeholder="Name" />
-												</div>
-												<div class="col-6 col-12-small">
-													<input type="text" name="email" id="contact-email" placeholder="Email" />
-												</div>
-												<div class="col-12">
-													<textarea name="message" id="contact-message" placeholder="Message" rows="4"></textarea>
-												</div>
-												<div class="col-12">
-													<ul class="actions">
-														<li><input type="submit" class="style1" value="Send" /></li>
-														<li><input type="reset" class="style2" value="Reset" /></li>
-													</ul>
-												</div>
-											</div>
-										</form>
-									</section>
+	</main>
 
-							</div>
-							<div class="col-6 col-12-medium">
-
-								<!-- Contact -->
-									<section class="feature-list small">
-										<div class="row">
-											<div class="col-6 col-12-small">
-												<section>
-													<h3 class="icon solid fa-home">Mailing Address</h3>
-													<p>
-														Untitled Corp<br />
-														1234 Somewhere Rd<br />
-														Nashville, TN 00000
-													</p>
-												</section>
-											</div>
-											<div class="col-6 col-12-small">
-												<section>
-													<h3 class="icon solid fa-comment">Social</h3>
-													<p>
-														<a href="#">@untitled-corp</a><br />
-														<a href="#">linkedin.com/untitled</a><br />
-														<a href="#">facebook.com/untitled</a>
-													</p>
-												</section>
-											</div>
-											<div class="col-6 col-12-small">
-												<section>
-													<h3 class="icon solid fa-envelope">Email</h3>
-													<p>
-														<a href="#">info@untitled.tld</a>
-													</p>
-												</section>
-											</div>
-											<div class="col-6 col-12-small">
-												<section>
-													<h3 class="icon solid fa-phone">Phone</h3>
-													<p>
-														(000) 555-0000
-													</p>
-												</section>
-											</div>
-										</div>
-									</section>
-
-							</div>
-						</div>
-						<div id="copyright">
-							<ul>
-								<li>&copy; Untitled.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-							</ul>
-						</div>
-					</div>
-				</section>
-
+	<!-- Footer -->
+	<footer id="footer">
+		<div class="container footer-grid">
+			<p>&copy; <span id="year">2026</span> Pedro Alejandro Molina Ortiz</p>
+			<ul class="social">
+				<li><a href="https://github.com/pedrodevpy" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a></li>
+				<li><a href="https://www.linkedin.com/in/pedro-molina-b6b899267/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a></li>
+				<li><a href="mailto:pealmo98@gmail.com" aria-label="Email"><i class="fas fa-envelope" aria-hidden="true"></i></a></li>
+			</ul>
+			<p class="muted small"><span data-i18n="footer.credit">Diseño basado en</span> <a href="https://html5up.net" target="_blank" rel="noopener noreferrer">Escape Velocity · HTML5 UP</a></p>
 		</div>
+	</footer>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.dropotron.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
+	<script src="assets/js/i18n.js"></script>
+	<script src="assets/js/main.js"></script>
+</body>
 </html>
