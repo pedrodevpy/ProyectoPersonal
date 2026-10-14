@@ -294,7 +294,7 @@
 						<p data-i18n="proj.4.desc">Marca propia desde la que construyo páginas web, sistemas y automatizaciones para micro y pequeñas empresas. El sitio presenta la oferta como un ecosistema de cuatro capas —presencia digital, organización de clientes y citas, automatización y software a medida— para que el negocio empiece por la que necesita hoy sin tirar lo construido cuando llega el siguiente paso.</p>
 						<dl class="project-facts">
 							<div><dt data-i18n="proj.role">Mi rol</dt><dd data-i18n="proj.4.role">Fundador y desarrollador: identidad, sitio corporativo y desarrollo de los proyectos de clientes</dd></div>
-							<div><dt data-i18n="proj.highlights">Destacado</dt><dd data-i18n="proj.4.hl">Sitio construido con React y Vite, con secciones de problema, soluciones por capas, metodología de trabajo, servicios detallados y FAQ. Formulario de captación con validación y canal directo de WhatsApp. En desarrollo PEVLYN Agenda, la plataforma propia de clientes, citas y servicios del ecosistema.</dd></div>
+							<div><dt data-i18n="proj.highlights">Destacado</dt><dd data-i18n="proj.4.hl">Sitio construido con React y Vite, con secciones de problema, soluciones por capas, metodología de trabajo, servicios detallados y FAQ. Formulario de captación con validación y canal directo de WhatsApp. La primera pieza del ecosistema, PEVLYN Agenda, ya está en producción.</dd></div>
 						</dl>
 						<ul class="chips chips-sm">
 							<li>React</li><li>Vite</li><li>Tailwind CSS</li><li>JavaScript</li><li>WhatsApp API</li><li>SEO</li><li>Open Graph</li><li>Vercel</li>
@@ -306,6 +306,28 @@
 				</article>
 
 				<article class="project project-reverse reveal">
+					<a class="project-media" href="https://agenda.pevlyn.com" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+						<img src="images/agenda-cover.svg" width="1200" height="675" alt="Diagrama: línea de tiempo de citas donde una reserva solapada es rechazada por una restricción de exclusión GiST, sobre tres negocios con datos aislados" loading="lazy" />
+					</a>
+					<div class="project-body">
+						<p class="project-cat" data-i18n="proj.5.cat">Producto propio · SaaS multi-tenant · En producción</p>
+						<h3>PEVLYN Agenda</h3>
+						<p class="project-sub" data-i18n="proj.5.sub">Gestión de citas y reservas — agenda.pevlyn.com</p>
+						<p data-i18n="proj.5.desc">Plataforma SaaS B2B donde cada negocio administra sus servicios, su equipo y su agenda, y sus clientes reservan por su cuenta desde un enlace público. Arquitectura desacoplada entre una API en Django REST Framework y un frontend en Next.js 15, con aislamiento estricto de datos por inquilino y Row Level Security.</p>
+						<dl class="project-facts">
+							<div><dt data-i18n="proj.role">Mi rol</dt><dd data-i18n="proj.5.role">Desarrollador full-stack: arquitectura, API, modelo de datos e interfaz</dd></div>
+							<div><dt data-i18n="proj.highlights">Destacado</dt><dd data-i18n="proj.5.hl">Motor de disponibilidad y resolución de conflictos con restricciones de exclusión GiST (btree_gist) en PostgreSQL, que elimina las race conditions y garantiza cero solapamientos a nivel de base de datos. Arquitectura por capas con patrón Service-Selector que separa la lógica de negocio de los controladores HTTP, respaldada por más de 150 pruebas automatizadas entre unitarias, de integración y de aislamiento. Interfaz con Server y Client Components, onboarding interactivo, reserva pública con enlaces firmados criptográficamente y correos transaccionales vía Resend.</dd></div>
+						</dl>
+						<ul class="chips chips-sm">
+							<li>Django</li><li>Django REST Framework</li><li>PostgreSQL</li><li>btree_gist</li><li>Row Level Security</li><li>Next.js 15</li><li>TypeScript</li><li>Resend API</li><li>Vercel</li>
+						</ul>
+						<div class="actions">
+							<a href="https://agenda.pevlyn.com" class="btn btn-primary" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt" aria-hidden="true"></i> <span data-i18n="proj.view">Ver proyecto</span></a>
+						</div>
+					</div>
+				</article>
+
+				<article class="project reveal">
 					<a class="project-media" href="https://www.clinicadanielrivera.com" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
 						<img src="images/clinica-desktop.webp" width="1200" height="675" alt="Captura del sitio web de la Clínica Daniel Rivera" loading="lazy" />
 					</a>
@@ -328,7 +350,7 @@
 					</div>
 				</article>
 
-				<article class="project reveal">
+				<article class="project project-reverse reveal">
 					<div class="project-media project-media-static">
 						<img src="images/ingenialink-cover.svg" width="1200" height="675" alt="Diagrama: tres plantillas Excel convergen en un módulo de validación que importa a una base de datos de trazabilidad RFID" loading="lazy" />
 					</div>
