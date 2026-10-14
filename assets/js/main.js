@@ -35,7 +35,7 @@
 
 	function applyTheme(theme) {
 		root.setAttribute('data-theme', theme);
-		if (themeMeta) themeMeta.setAttribute('content', theme === 'light' ? '#f7f7f9' : '#0b0b0e');
+		if (themeMeta) themeMeta.setAttribute('content', theme === 'light' ? '#ffffff' : '#0a0a0b');
 		if (themeToggle) {
 			var isEn = root.lang === 'en';
 			themeToggle.setAttribute('aria-label', theme === 'light'
