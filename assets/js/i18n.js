@@ -61,7 +61,6 @@ window.I18N_EN = {
 	'proj.role': 'My role',
 	'proj.highlights': 'Highlights',
 	'proj.view': 'View project',
-	'proj.code': 'View code',
 	'proj.4.cat': 'Own venture · Brand and product · In production',
 	'proj.4.sub': 'Technology for small businesses — pevlyn.com',
 	'proj.4.desc': 'My own brand, from which I build websites, systems and automations for micro and small businesses. The site presents the offering as a four-layer ecosystem — digital presence, client and appointment management, automation and custom software — so a business can start with the layer it needs today without throwing away what it built when the next step arrives.',
