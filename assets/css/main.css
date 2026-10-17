@@ -431,6 +431,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
 }
 .logo:hover { color: var(--text); }
 .logo:hover .logo-dot { color: var(--accent-hover); }
+.logo, #nav a { white-space: nowrap; }
 .logo-dot {
 	color: var(--accent);
 	transition: color var(--dur);
@@ -909,7 +910,9 @@ a.project-media:hover img { transform: scale(1.03); }
 	.contact-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
-@media (max-width: 880px) {
+/* La barra completa necesita ~1040px: el nav en mayúsculas con tracking
+   abierto es ancho, así que el menú se colapsa antes de que llegue a partirse. */
+@media (max-width: 1080px) {
 	.nav-toggle { display: inline-flex; }
 	.nav-cv { display: none; }
 
